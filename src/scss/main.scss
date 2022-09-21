@@ -3,24 +3,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
-h1 {
-  font-family: $f-title;
-  color: lighten($title-clr, 10%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-p {
-  font-family: $title-clr;
-  color: darken($prg-clr, 10%);
-  font-weight: 700;
-}
-button {
-  font-family: $btn-fnt;
-  color: darken($prg-clr, 10);
-  border: 1px solid $title-clr;
-  border-radius: 0.2rem;
-  text-shadow: 3px 3px 10px rgb(155, 123, 123);
-  box-shadow: 0px 0px 5px 1px $btn-clr;
-  &:hover {
-    transform: scale(1.04);
-    color: darken($btn-clr, 10);
+//beginning of navbar
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(168, 173, 175);
+  padding: 0.15rem 0;
+  .title-container h1 {
+    font-family: $f-title;
+    color: rgb(226, 214, 214);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 1px rgb(156, 151, 151);
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    li {
+      list-style: none;
+      &:hover {
+        transform: scale(1.1);
+        transform: perspective(10deg);
+      }
+    }
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgb(226, 214, 214);
+      font-size: $fnt-main;
+      font-family: $f-title;
+      font-weight: 700;
+      padding: 0.2rem 0.4rem;
+      text-shadow: 3px 3px 1px rgb(156, 151, 151);
+    }
   }
 }
+//end of navbar
+
+.main-title {
+  background-image: url(/src/images/porsche-g3458429ef_1920.jpg);
+  height: 90.6vh;
+  background-position: center;
+  color: rgb(170, 163, 163);
+  text-shadow: 0px 0px 1px white;
+  padding-top: 3rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $f-title;
+}
+// end of nav bar
+// beginnig of cards container
+.parts-container {
+  background-color: rgba(98, 122, 114, 0);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 0 0.8rem;
+  .engine,
+  .transmissions,
+  .breaks,
+  .tyres {
+    background-color: rgba(240, 248, 255, 0);
+    box-shadow: 0 14px 16px 0 rgba(0, 0, 0, 0.2),
+      0 14px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  h6,
+  p {
+    color: rgb(192, 187, 187);
+  }
+  h6 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+  p {
+    font-size: $fnt-main;
+  }
+  img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10%;
+  }
+}
+// end of cards container
+//  begin for footer
+#footer-h1 {
+  margin-top: 4.3rem;
+  font-size: 1.1rem;
+  color: rgb(66, 54, 54);
+  text-shadow: 0px 0px 2 white;
+}
+//end of footer
