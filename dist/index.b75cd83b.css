@@ -1,0 +1,26 @@
+@import "https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap";
+h1 {
+  color: #676161;
+  font-family: Saira Stencil One, cursive;
+}
+
+p {
+  font-family: #4d4848;
+  color: #5f664d;
+  font-weight: 700;
+}
+
+button {
+  color: #5f664d;
+  text-shadow: 3px 3px 10px #9b7b7b;
+  border: 1px solid #4d4848;
+  border-radius: .2rem;
+  font-family: Saira Stencil One, cursive;
+  box-shadow: 0 0 5px 1px #1f3572;
+}
+
+button:hover {
+  color: #14224a;
+  transform: scale(1.04);
+}
+
