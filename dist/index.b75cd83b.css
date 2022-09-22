@@ -11,7 +11,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: .15rem 0;
+  padding: .6rem 0;
   display: flex;
 }
 
@@ -20,6 +20,7 @@ nav .title-container h1 {
   text-transform: uppercase;
   text-shadow: 3px 3px 1px #9c9797;
   font-family: Saira Stencil One, cursive;
+  font-size: 1.5rem;
 }
 
 nav .navbar ul {
@@ -44,13 +45,13 @@ nav .navbar ul a {
   text-shadow: 3px 3px 1px #9c9797;
   padding: .2rem .4rem;
   font-family: Saira Stencil One, cursive;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
 }
 
 .main-title {
-  height: 90.6vh;
+  height: 100vh;
   color: #aaa3a3;
   text-shadow: 0 0 1px #fff;
   text-transform: uppercase;
@@ -59,13 +60,14 @@ nav .navbar ul a {
   background-position: center;
   padding-top: 3rem;
   font-family: Saira Stencil One, cursive;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .parts-container {
   background-color: #627a7200;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  margin-top: 7rem;
   padding: 0 .8rem;
   display: grid;
 }
@@ -91,19 +93,48 @@ nav .navbar ul a {
 }
 
 .parts-container p {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .parts-container img {
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   border-radius: 10%;
 }
 
 #footer-h1 {
   color: #423636;
   text-shadow: 0 0 2px #fff;
-  margin-top: 4.3rem;
-  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 752px) {
+  .parts-container {
+    background-repeat: repeat;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    display: flex;
+  }
+}
+
+@media (max-width: 258px) {
+  body {
+    margin: 0;
+  }
+
+  body h1 {
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  body h1, body p {
+    font-size: .6rem;
+  }
 }
 

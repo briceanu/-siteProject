@@ -1,8 +1,6 @@
 @use "fonts" as *;
 @use "colors" as *;
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,12 +14,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   background-color: rgb(168, 173, 175);
-  padding: 0.15rem 0;
+  padding: 0.6rem 0;
   .title-container h1 {
     font-family: $f-title;
     color: rgb(226, 214, 214);
     text-transform: uppercase;
-    text-shadow: 3px 3px 1px rgb(156, 151, 151);
+    text-shadow: 3px 3px 1px $clr-shadow;
+    font-size: $fnt-main;
   }
 
   .navbar ul {
@@ -44,7 +43,7 @@ nav {
       font-family: $f-title;
       font-weight: 700;
       padding: 0.2rem 0.4rem;
-      text-shadow: 3px 3px 1px rgb(156, 151, 151);
+      text-shadow: 3px 3px 1px $clr-shadow;
     }
   }
 }
@@ -52,12 +51,12 @@ nav {
 
 .main-title {
   background-image: url(/src/images/porsche-g3458429ef_1920.jpg);
-  height: 90.6vh;
+  height: 100vh;
   background-position: center;
   color: rgb(170, 163, 163);
   text-shadow: 0px 0px 1px white;
   padding-top: 3rem;
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
   font-family: $f-title;
@@ -70,6 +69,8 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding: 0 0.8rem;
+  margin-top: 7rem;
+
   .engine,
   .transmissions,
   .breaks,
@@ -95,17 +96,46 @@ nav {
     font-size: $fnt-main;
   }
   img {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     border-radius: 10%;
   }
 }
 // end of cards container
 //  begin for footer
 #footer-h1 {
-  margin-top: 4.3rem;
-  font-size: 1.1rem;
+  margin-top: 2rem;
+  font-size: 2rem;
   color: rgb(66, 54, 54);
   text-shadow: 0px 0px 2 white;
 }
 //end of footer
+// media queries
+@media (max-width: 752px) {
+  .parts-container {
+    grid-template-columns: repeat(2, 1fr);
+    background-repeat: repeat;
+    gap: 0.5rem;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    // gap: 0.1rem;
+  }
+}
+@media (max-width: 258px) {
+  body {
+    margin: 0;
+    h1 {
+      font-size: 10px;
+      text-align: center;
+      justify-content: center;
+    }
+    h1,
+    p {
+      font-size: 0.6rem;
+    }
+  }
+}
+// end of media queries

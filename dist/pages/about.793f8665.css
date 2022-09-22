@@ -1,0 +1,89 @@
+@import "https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../highway-2679490_960_720.d76f2fb1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.main-text, .commitment {
+  text-align: center;
+  color: #695252;
+  background-color: #538b7923;
+  border-radius: .7rem;
+  margin: 3rem 2rem;
+  padding: 0 1rem;
+  font-family: Saira Stencil One, cursive;
+  font-size: 1.25rem;
+  transition: all .3s;
+  box-shadow: 0 10px 16px #0003, 0 10px 16px #0003;
+}
+
+.main-text p, .commitment p {
+  padding-bottom: 1rem;
+}
+
+.main-text:hover, .commitment:hover {
+  transform: scale(1.1);
+}
+
+.main-text:hover h1, .commitment:hover h1 {
+  text-decoration: underline;
+  transition: all .5s linear;
+  transform: rotate(2deg);
+}
+
+.main-text h1, .commitment h1 {
+  text-align: center;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.commitment {
+  color: #363030;
+  width: 60vw;
+  text-shadow: .5px .5px 1px wheat;
+  background-color: #6b857d52;
+}
+
+@media (max-width: 380px) {
+  .main-text h1, .commitment h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 258px) {
+  h1 {
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+
+  h1, p {
+    font-size: .6rem;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+svg {
+  fill: #282b2ba4;
+  width: 100px;
+  height: 100px;
+  margin-top: 2.2rem;
+}
+
