@@ -1,0 +1,75 @@
+@use "fonts" as *;
+@use "colors" as *;
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Ms+Madi&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  // background-color: rgba(173, 169, 169, 0.212);
+  background: linear-gradient(
+    45deg,
+    rgba(71, 67, 67, 0.432),
+    rgba(92, 84, 84, 0.212),
+    rgba(201, 129, 129, 0.432)
+  );
+}
+
+.mapouter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  text-align: right;
+  //   width: 50rem;
+  //   height: 25rem;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 600px;
+  height: 400px;
+}
+.gmap_iframe {
+  width: 600px !important;
+  height: 350px !important;
+}
+.address-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  h3 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+h3,
+p {
+  color: $title-clr;
+  font-family: $f-madi;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .mapouter {
+    justify-content: center;
+  }
+}

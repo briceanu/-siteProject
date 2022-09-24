@@ -50,6 +50,23 @@ nav .navbar ul a {
   text-decoration: none;
 }
 
+.hamburger-menu {
+  width: 3.75rem;
+  height: 57px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.hamburger-menu span {
+  width: 80%;
+  height: 8px;
+  background: #fff;
+  border-radius: 7px;
+}
+
 .main-title {
   height: 100vh;
   color: #aaa3a3;
@@ -110,14 +127,27 @@ nav .navbar ul a {
 }
 
 @media (max-width: 752px) {
+  nav {
+    flex-direction: column;
+  }
+
   .parts-container {
-    background-repeat: repeat;
     grid-template-columns: repeat(2, 1fr);
     gap: .5rem;
   }
 
-  .navbar ul {
-    flex-direction: column;
+  .navbar {
+    flex-direction: row;
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .toggle {
+    justify-content: center;
+    align-self: center;
     display: flex;
   }
 }

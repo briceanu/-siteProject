@@ -1,3 +1,92 @@
 @use "fonts" as *;
 @use "colors" as *;
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  background-color: rgba(194, 192, 192, 0.411);
+  padding-top: 2rem;
+  p {
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-family: $f-madi;
+    font-weight: 700;
+    color: rgba(78, 76, 76, 0.808);
+    padding-top: 1rem;
+  }
+}
+.richard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/2;
+  padding: 1rem 2rem;
+}
+.boby {
+  grid-column: 2/-1;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.antony {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+h1 {
+  color: $title-clr;
+  font-family: $f-title;
+  font-size: 2rem;
+}
+h4 {
+  @extend h1;
+  color: lighten($title-clr, 30);
+}
+.container {
+  font-size: 2rem;
+  img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 14px 16px 0 rgba(0, 0, 0, 0.2),
+      0 14px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .richard {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+  .boby {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    h4 {
+      text-align: center;
+    }
+  }
+  .antony {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    h4 {
+      text-align: center;
+    }
+  }
+}

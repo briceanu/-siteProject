@@ -1,0 +1,74 @@
+@import "https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Ms+Madi&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e4d8d828;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 1rem;
+  line-height: 1.5rem;
+  display: grid;
+}
+
+body h1, body p {
+  color: #4d4848;
+  text-transform: uppercase;
+  font-family: Saira Stencil One, cursive;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+body p {
+  text-transform: none;
+  margin-top: .7rem;
+  padding: 0 1rem;
+  font-family: Arvo, serif;
+  font-size: 1.125rem;
+}
+
+.transmissions svg {
+  width: 100px;
+  height: 100px;
+  fill: #5a5858;
+  border-radius: 20%;
+  margin-top: auto;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  background-color: #f0ffff00;
+  border-radius: 20%;
+  margin-top: auto;
+}
+
+.engine, .body-parts, .transmissions, .brakes, .lubricants, .exhaust, .heating, .cooling, .electrical {
+  text-align: center;
+  flex-flow: column wrap;
+  align-items: center;
+  display: flex;
+}
+
+.body-parts, .transmissions, .brakes, .lubricants, .exhaust, .heating, .cooling, .electrical {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+    display: block;
+  }
+}
+
+button {
+  background: linear-gradient(to right, #81813d77, #ff000059);
+  border-radius: 4px;
+  padding: .5rem;
+}
+

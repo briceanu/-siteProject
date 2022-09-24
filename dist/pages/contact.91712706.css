@@ -1,0 +1,73 @@
+@import "https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Ms+Madi&display=swap";
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(45deg, #4743436e, #5c545436, #c981816e);
+}
+
+.mapouter {
+  text-align: right;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto;
+  display: flex;
+}
+
+.gmap_canvas {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  background: none !important;
+}
+
+.gmap_iframe {
+  width: 600px !important;
+  height: 350px !important;
+}
+
+.address-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.address-container h3 {
+  font-size: 1.6rem;
+}
+
+.address-container p {
+  font-size: 1.2rem;
+}
+
+h3, p {
+  color: #4d4848;
+  text-align: center;
+  padding: .2rem 0;
+  font-family: Ms Madi, cursive;
+}
+
+footer {
+  justify-content: center;
+  display: flex;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+  margin: 0 .2rem;
+}
+
+@media (max-width: 500px) {
+  .mapouter {
+    justify-content: center;
+  }
+}
+
